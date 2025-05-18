@@ -1,9 +1,27 @@
 import { describe, it, expect } from 'vitest';
+import { add, subtract, multiply, divide } from './arithmetic';
 
-describe.todo('add', () => {});
+// also should add corner cases with null, undefined and etc.
+describe('add', () => {
+  it('should add two positive numbers', () => {
+    expect(add(2, 2)).toBe(4);
+  });
+});
 
-describe.todo('subtract', () => {});
+describe('subtract', () => {
+  it('should subtract one positive numbers from another', () => {
+    expect(subtract(2, 2)).toBe(0);
+  });
+});
 
-describe.todo('multiply', () => {});
+describe('multiply', () => {
+  it('should multiply one positive numbers by another', () => {
+    expect(multiply(2, 2)).toBe(4);
+  });
+});
 
-describe.todo('divide', () => {});
+describe('divide', () => {
+  it('should divide one positive numbers by another', () => {
+    expect(divide(2, 2)).toBe(1);
+  });
+});
