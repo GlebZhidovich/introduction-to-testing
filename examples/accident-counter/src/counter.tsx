@@ -23,16 +23,21 @@ export const Counter = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <button onClick={() => dispatch({ type: 'increment' })}>
+          <button
+            data-testid="btn-increment"
+            onClick={() => dispatch({ type: 'increment' })}
+          >
             Increment
           </button>
           <button
+            data-testid="btn-decrement"
             onClick={() => dispatch({ type: 'decrement' })}
             disabled={state.count === 0}
           >
             Decrement
           </button>
           <button
+            data-testid="btn-reset"
             onClick={() => dispatch({ type: 'reset' })}
             disabled={state.count === 0}
           >
