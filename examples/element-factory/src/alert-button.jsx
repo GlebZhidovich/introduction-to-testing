@@ -8,13 +8,16 @@ export const AlertButton = ({}) => {
       <label>
         Message
         <input
+          data-testid="message-input"
           type="text"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
         />
       </label>
 
-      <button onClick={() => alert(message)}>Trigger Alert</button>
+      <button data-testid="message-btn" onClick={() => alert(message)}>
+        Trigger Alert
+      </button>
     </div>
   );
 };
