@@ -9,5 +9,12 @@ function delay(callback) {
 }
 
 describe('delay function', () => {
-  it.todo('should call callback after delay', () => {});
+  it('should call callback after delay', () => {
+    const cb = vi.fn();
+
+    delay(cb);
+    vi.advanceTimersByTime(1000); // or advanceTimersToNextTimer
+
+    expect(cb).toHaveBeenCalled();
+  });
 });
